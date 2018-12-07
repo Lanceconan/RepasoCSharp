@@ -18,18 +18,25 @@ namespace pruebaLinq
         public IEnumerable<int> GetNumbersByFilter(int[] arrayNumeros, int superior, int inferior)
         {
             IEnumerable<int> valores = from n in arrayNumeros
-                                       where n > inferior && n < superior
+                                       where n > superior && n < inferior
                                        select n;
             return valores;
         }
 
-        public IEnumerable<string> GetStringsByFilter(string[] inputData, string filter)
+        public int[] GetNumerosParesArray(int[] inputData)
         {
-            IEnumerable<string> filteredString = from filterString in inputData
-                                                 where filterString.Contains(filter)
-                                                 orderby filterString
-                                                 select filterString;
-            return filteredString;
+            int[] valores = (from par in inputData
+                             where par % 2 == 0
+                             select par).ToArray<int>();
+            return valores;
+        }
+
+        public List<int> GetNumerosParesList(int[] inputData)
+        {
+            List<int> valores = (from par in inputData
+                             where par % 2 == 0
+                             select par).ToList<int>();
+            return valores;
         }
 
         public IEnumerable<int> GetNumerosPares(int[] inputData)
@@ -49,6 +56,17 @@ namespace pruebaLinq
 
             return valores;
         }
+
+        public IEnumerable<string> GetStringsByFilter(string[] inputData, string filter)
+        {
+            IEnumerable<string> filteredString = from filterString in inputData
+                                                 where filterString.Contains(filter)
+                                                 orderby filterString
+                                                 select filterString;
+            return filteredString;
+        }
+
+        
 
 
 

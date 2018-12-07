@@ -37,8 +37,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BasicFunctions.cs" />
+    <Compile Include="ConexionBD.cs" />
     <Compile Include="LinqTest.cs" />
     <Compile Include="MainClass.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

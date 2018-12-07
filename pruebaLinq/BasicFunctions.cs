@@ -52,7 +52,7 @@ namespace pruebaLinq
 
         }
 
-        public void printFormatedString(IEnumerable<string> inputData)
+        public void PrintFormatedString(IEnumerable<string> inputData)
         {
             foreach (string str in inputData)
                 Console.WriteLine(str);
@@ -61,7 +61,23 @@ namespace pruebaLinq
 
         }
 
-        public void printFormatedInt(IEnumerable<int> inputData)
+        public void PrintFormatedInt(IEnumerable<int> inputData)
+        {
+            foreach (int num in inputData)
+                Console.WriteLine(num);
+
+            Console.WriteLine(" ---- ");
+        }
+
+        public void PrintFormatedIntArray(int[] inputData)
+        {
+            foreach (int num in inputData)
+                Console.WriteLine(num);
+
+            Console.WriteLine(" ---- ");
+        }
+
+        public void PrintFormatedIntList(List<int> inputData)
         {
             foreach (int num in inputData)
                 Console.WriteLine(num);
